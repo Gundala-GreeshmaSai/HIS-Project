@@ -1,0 +1,97 @@
+/* Full Page */
+.main-container {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* LEFT SIDE */
+.left-section {
+  width: 40%;
+  background: #f5f7f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* LOGIN CARD */
+.login-card {
+  width: 320px;
+}
+
+.login-card h2 {
+  margin-bottom: 5px;
+}
+
+.sub-text {
+  color: gray;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.login-card button {
+  width: 100%;
+  padding: 12px;
+  background: #1f7a6b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.login-card button:hover {
+  background: #176458;
+}
+
+.error {
+  color: red;
+  font-size: 13px;
+}
+
+.register-text {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.register-text span {
+  color: #1f7a6b;
+  cursor: pointer;
+  font-weight: bold;
+}
+/* RIGHT SECTION POSITION FIX */
+.right-section {
+  width: 60%;
+  background: linear-gradient(180deg, #1f7a6b, #0f3f38);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;   /* ⭐ Needed */
+  overflow: hidden;
+}
+/* IMAGE STYLE - LEFT TOP */
+.right-image {
+  position: absolute;
+  border-radius: 8px;
+  top: 20px;     
+  right: 20px;   
+  height: 160px; 
+  opacity: 1;
+  pointer-events: none;
+}
+/* DASHBOARD BOX */
+.dashboard-box {
+  background: white;
+  color: black;
+  padding: 20px;
+  border-radius: 15px;
+  width: 220px;
+}

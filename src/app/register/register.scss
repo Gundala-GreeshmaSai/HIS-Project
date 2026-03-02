@@ -1,0 +1,99 @@
+/* MAIN LAYOUT */
+.main-container {
+  display: flex;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* LEFT FORM SIDE */
+.form-section {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+}
+
+.form-card {
+  width: 320px;
+}
+
+.form-card h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #777;
+  margin-bottom: 25px;
+}
+
+/* INPUTS */
+.form-card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+/* BUTTON */
+.form-card button {
+  width: 100%;
+  padding: 12px;
+  background: #1f7a6b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.form-card button:hover {
+  background: #1f7a6b;
+}
+
+.login-text {
+  margin-top: 15px;
+}
+
+.login-text span {
+  color: #1f7a6b;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* RIGHT THEME SIDE */
+.theme-section {
+  width: 60%;
+  background: linear-gradient(135deg, #1f7a6b, #1f7a6b);
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 60px;
+}
+
+.theme-content {
+  max-width: 420px;
+}
+
+.theme-content h1 {
+  font-size: 42px;
+  line-height: 1.2;
+}
+
+/* DASHBOARD CARD */
+.dashboard-card {
+  background: white;
+  color: #333;
+  padding: 25px;
+  border-radius: 16px;
+  margin-top: 40px;
+  width: 220px;
+}
+
+.dashboard-card h2 {
+  font-size: 40px;
+  color: #1f7a6b;
+}

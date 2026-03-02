@@ -1,0 +1,52 @@
+<div class="main-container">
+
+  <!-- LEFT LOGIN SECTION -->
+  <div class="left-section">
+    <div class="login-card">
+
+      <h2>Get Started</h2>
+      <p class="sub-text">Welcome to CarePlus Hospital - Create your account</p>
+
+      <form (ngSubmit)="onLogin()">
+
+        <input type="email"
+               placeholder="Email"
+               [(ngModel)]="loginData.email"
+               name="email"
+               required>
+
+        <input type="password"
+               placeholder="Password"
+               [(ngModel)]="loginData.password"
+               name="password"
+               required>
+
+        <button type="submit">Log In</button>
+
+      </form>
+
+      <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+
+      <p class="register-text">
+        Don't have an account?
+        <span (click)="goToRegister()">Sign up</span>
+      </p>
+
+    </div>
+  </div>
+
+  <!-- RIGHT GREEN SECTION -->
+  <div class="right-section"><img src="assets/Doctorimage.png" class="right-image" alt="Healthcare">
+    <div class="right-content">
+      <h1>Enter the Future of Healthcare, today</h1>
+
+      <div class="dashboard-box">
+        <h3>Patient Dashboard</h3>
+        <p>Total Appointments</p>
+        <h2>12</h2>
+        <small>Next Visit: 25 Feb 2026</small>
+      </div>
+    </div>
+  </div>
+
+</div>
