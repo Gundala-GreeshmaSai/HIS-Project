@@ -5,9 +5,11 @@
     "packageManager": "npm",
     "analytics": "d85fd552-d089-4c6a-a6b3-b861bde5110d"
   },
+ 
   "newProjectRoot": "projects",
+  
   "projects": {
-    "auth-app": {
+    "hospital-information-management": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -61,10 +63,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "auth-app:build:production"
+              "buildTarget": "hospital-information-management:build:production"
             },
             "development": {
-              "buildTarget": "auth-app:build:development"
+              "buildTarget": "hospital-information-management:build:development"
             }
           },
           "defaultConfiguration": "development"
