@@ -6,8 +6,14 @@ import { RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [RouterOutlet],
   template: `
-    <h2 style="text-align:center">Angular Authentication App</h2>
+    <h2 class="title"><b>Hospital Management System</b></h2>
     <router-outlet></router-outlet>
-  `
+  `,
+  styles: [`
+    .title {
+      text-align: center;
+      color: #1f7a6b;
+    }
+  `]
 })
 export class App {}
