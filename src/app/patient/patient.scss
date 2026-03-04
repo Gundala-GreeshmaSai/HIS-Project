@@ -1,0 +1,71 @@
+/* PAGE */
+body{
+  margin:0;
+  font-family:'Segoe UI',sans-serif;
+  background: linear-gradient(to right,#e3f2fd,#f1f8e9);
+  min-height:100vh;
+
+  display:flex;
+  justify-content:center;   /* horizontal center */
+  align-items:flex-start;   /* keeps title visible */
+  flex-direction:column;
+}
+
+h1{
+  color:#1f6f46;
+  margin-top:30px;
+}
+
+/* FORM CONTAINER */
+.container{
+  width:420px;
+  background:white;
+  padding:30px;
+  border-radius:10px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.15);
+  margin:30px auto;   /* this centers the form */
+}
+/* FORM ROW */
+.form-row{
+  display:flex;
+  align-items:center;
+  margin-bottom:18px;
+}
+
+/* LABEL */
+.form-row label{
+  width:170px;
+  font-weight:600;
+  color:#1f6f46;
+}
+
+/* INPUTS */
+.form-row input,
+.form-row select{
+  flex:1;
+  padding:8px;
+  border-radius:5px;
+  border:1px solid #ccc;
+}
+
+/* RADIO */
+.form-row input[type="radio"]{
+  margin-left:8px;
+}
+
+/* BUTTON */
+.submit{
+  width:100%;
+  padding:10px;
+  background:#2e8b57;
+  color:white;
+  border:none;
+  border-radius:6px;
+  font-size:16px;
+  cursor:pointer;
+  margin-top:10px;
+}
+
+.submit:hover{
+  background:#1f6f46;
+}

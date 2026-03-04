@@ -1,1 +1,58 @@
-<p>patient works!</p>
+
+<div class="container">
+<div class="form-row">
+<label>Patient Name</label>
+<input type="text" [(ngModel)]="patient.name" name="name" required>
+</div>
+
+<div class="form-row">
+<label>Age</label>
+<input type="number" [(ngModel)]="patient.age" name="age" required>
+</div>
+
+<div class="form-row">
+<label>Gender</label>
+<input type="radio" [(ngModel)]="patient.gender" name="gender" value="Male"> Male
+<input type="radio" [(ngModel)]="patient.gender" name="gender" value="Female"> Female
+<input type="radio" [(ngModel)]="patient.gender" name="gender" value="Other"> Other
+</div>
+
+<div class="form-row">
+<label>Phone Number</label>
+<input type="text" [(ngModel)]="patient.phone" name="phone">
+</div>
+
+<div class="form-row">
+<label>Address</label>
+<input type="text" [(ngModel)]="patient.address" name="address">
+</div>
+<div class="form-row">
+<label>Blood Group</label>
+<select [(ngModel)]="patient.bloodgroup" name="bloodgroup">
+<option value="">Select</option>
+<option>A +ve</option>
+<option>A -ve</option>
+<option>B +ve</option>
+<option>B -ve</option>
+<option>O +ve</option>
+<option>O -ve</option>
+<option>AB +ve</option>
+<option>AB -ve</option>
+</select>
+</div><div class="form-row">
+<label>Doctor Name</label>
+
+<select [(ngModel)]="selectedDoctor" name="doctor" (change)="onDoctorChange()">
+<option value="">Select Doctor</option>
+<option *ngFor="let doc of doctors" [value]="doc.name">
+{{doc.name}}
+</option>
+</select>
+
+</div>
+
+<div class="form-row">
+<label>Doctor Specialization</label>
+<input type="text" [(ngModel)]="specialization" name="specialization" readonly>
+</div>
+<button class="submit">Submit</button>
