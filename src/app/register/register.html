@@ -1,2 +1,66 @@
+<div class="main-container">
 
-<div class="main-container"> <!-- LEFT SIDE FORM --> <div class="form-section"> <div class="form-card"> <h2>Get Started</h2> <p class="subtitle">Welcome to CarePlus Hospital - Create Your Account</p> <form (ngSubmit)="onRegister()"> <input type="email" placeholder="Email" [(ngModel)]="registerData.email" name="email" required> <input type="password" placeholder="Password" [(ngModel)]="registerData.password" name="password" required> <button type="submit">Sign Up</button> </form> <p class="login-text"> Already have an account? <span (click)="goToLogin()">Log In</span> </p> </div> </div> <!-- RIGHT SIDE THEME PANEL --> <div class="theme-section"> <div class="theme-content"> <h1>Enter the Future of Healthcare, today</h1> <div class="dashboard-card"> <h3>Patient Dashboard</h3> <h2>12</h2> <p>Total Appointments</p> <small>Next Visit: 25 Feb 2026</small> </div> </div> </div> </div> 
+  <!-- LEFT SIDE FORM -->
+  <div class="form-section">
+    <div class="form-card">
+
+      <h2>Get Started</h2>
+      <p class="subtitle">
+        Welcome to CarePlus Hospital - Create your account
+      </p>
+
+      <form #registerForm="ngForm" (ngSubmit)="onSubmit()">
+
+        <input type="text"
+               placeholder="Full Name"
+               name="name"
+               [(ngModel)]="registerData.name"
+               required>
+
+        <input type="email"
+               placeholder="Email"
+               name="email"
+               [(ngModel)]="registerData.email"
+               required>
+
+        <input type="tel"
+               placeholder="Phone Number"
+               name="phone"
+               [(ngModel)]="registerData.phone"
+               required>
+
+        <input type="password"
+               placeholder="Password"
+               name="password"
+               [(ngModel)]="registerData.password"
+               required>
+
+        <input type="password"
+               placeholder="Confirm Password"
+               name="confirmPassword"
+               [(ngModel)]="registerData.confirmPassword"
+               required>
+
+        <button type="submit">Sign Up</button>
+           
+      <p class="login-text">
+        If you already have an account?
+        <span (click)="goToLogin()">Sign in</span>
+      </p>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- RIGHT SIDE THEME -->
+  <div class="theme-section">
+    <div class="theme-content">
+
+      <h2>Enter the Future of Healthcare, today</h2>
+                 <div class="right-section"><img src="assets/Doctorimage.png" class="right-image" alt="Healthcare">
+      
+
+    </div>
+  </div>
+
+</div>

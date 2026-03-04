@@ -1,13 +1,13 @@
 /* Full Page */
 .main-container {
   display: flex;
-  height: 100vh;
+  height: 95vh;
   font-family: Arial, sans-serif;
 }
 
 /* LEFT SIDE */
 .left-section {
-  width: 40%;
+  width: 70%;
   background: #f5f7f9;
   display: flex;
   justify-content: center;
@@ -16,7 +16,7 @@
 
 /* LOGIN CARD */
 .login-card {
-  width: 320px;
+  width: 350px;
 }
 
 .login-card h2 {

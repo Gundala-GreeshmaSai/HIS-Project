@@ -8,32 +8,45 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './register.html',
   imports: [FormsModule],
   styleUrls: ['./register.scss']
-})
-export class RegisterComponent {
+})export class RegisterComponent {
+
+  constructor(
+    private authService: AuthService,
+    private router: Router
+  ) {}
 
   registerData = {
+    name: '',
     email: '',
-    password: ''
+    phone: '',
+    password: '',
+    confirmPassword: ''
   };
 
-  constructor(private authService: AuthService,
-              private router: Router) {}
+  onSubmit() {
 
-  onRegister() {
-    this.authService.register(this.registerData).subscribe({
-     
-       next: (res:any) => {
-      alert(res.message || 'Registration Successful');
-      this.router.navigate(['/login']);
-    },
-    error: (err) => {
-      console.log("Backend Error:", err);
-      alert('Registration Failed');
+   
+    if (this.registerData.password !== this.registerData.confirmPassword) {
+      alert("Passwords do not match");
+      return;
     }
-  });
-  
-  }
 
+    // Call service (example)
+    this.authService.register(this.registerData).subscribe({
+      next: (res) => {
+        alert("Registration Successful!");
+        console.log(res);
+
+        // redirect after registration
+        this.router.navigate(['/login']);
+      },
+      error: (err) => {
+        console.error(err);
+        alert("Registration Failed");
+      }
+    });
+  }
+  
   goToLogin() {
     this.router.navigate(['/login']);
   }
