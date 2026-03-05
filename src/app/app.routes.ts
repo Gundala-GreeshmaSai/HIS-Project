@@ -3,7 +3,7 @@ import { LoginComponent } from './login/login';
 import { RegisterComponent} from './register/register';
 import {DashboardComponent} from './dashboard/dashboard';
 import{PatientComponent} from './patient/patient';
-import { AuthGuard } from './auth-guard';
+import { AuthGuard } from './Server-guard';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
